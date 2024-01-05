@@ -29,10 +29,9 @@ education:
   courses:
     - course: MS in Physics
       institution: Pusan National Univeristy
-      year: .
     - course: BS in Physics
       institution: Pusan National Univeristy
-      year: .
+
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
