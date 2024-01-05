@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: "From-cradle-to-grave: the only complete tool for our measurement" # Website name
+title: "From-cradle-to-grave" # Website name
 baseURL: 'https://autoxrd.netfliy.app' # Website URL
 
 ############################
