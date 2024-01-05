@@ -1,6 +1,6 @@
 ---
 title: Contribution
-date: 2022-10-24
+date: 2024-01-05
 
 type: landing
 
@@ -11,12 +11,11 @@ sections:
       # Choose which groups/teams of users to display.
       #   Edit `user_groups` in each user's profile to add them to one or more of these groups.
       user_groups:
-          - Principal Investigators
-          - Researchers
-          - Grad Students
-          - Administration
-          - Visitors
-          - Alumni
+          - Leadership
+          - Computer Science and Operations
+          - Materials Algorithms, Data and Experimental Validation
+          - Project Foundation
+          - Thanks also to
       sort_by: Params.last_name
       sort_ascending: true
     design:
