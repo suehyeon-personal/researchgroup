@@ -8,8 +8,7 @@ sections:
   - block: hero
     content:
       title: |
-        Wowchemy
-        Research Group
+        The Only Comprehensive Tool for Our Measurement
       image:
         filename: welcome.jpg
       text: |
@@ -31,10 +30,10 @@ sections:
         tag: ''
       offset: 0
       order: desc
-      page_type: post
+      page_type: functions
     design:
       view: card
-      columns: '1'
+      columns: '2'
   
   - block: markdown
     content:
@@ -61,7 +60,7 @@ sections:
       title:
       subtitle:
       text: |
-        {{% cta cta_link="./people/" cta_text="Meet the team →" %}}
+        {{% cta cta_link="./contribution/" cta_text="Meet the team →" %}}
     design:
       columns: '1'
 ---
