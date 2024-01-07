@@ -8,7 +8,7 @@ sections:
   - block: hero
     content:
       title: |
-        The Only Comprehensive Tool for Our Measurement
+        The Only Complete Tool for Our Measurement
       image:
         filename: welcome.jpg
       text: |
