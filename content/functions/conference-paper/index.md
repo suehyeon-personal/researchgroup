@@ -74,17 +74,50 @@ projects:
 #   Otherwise, set `slides: ""`.
 slides: example
 ---
-
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 {{% callout note %}}
 Create your slides in Markdown - click the _Slides_ button to check out the example.
 {{% /callout %}}
 
-{{ <textarea id="dataInput" rows="10" cols="30" placeholder="데이터를 입력하세요. 각 줄은 쉼표(,)로 구분된 2개의 값이어야 합니다."></textarea>
-<button onclick="drawLineChart()">Plot</button> }}
+<textarea id="dataInput" rows="10" cols="30" placeholder="데이터를 입력하세요. 각 줄은 쉼표(,)로 구분된 2개의 값이어야 합니다."></textarea>
+<button onclick="drawLineChart()">Plot</button>
 
+<canvas id="myLineChart" width="400" height="400"></canvas>
 
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
+<script>
+function drawLineChart() {
+    const inputData = document.getElementById('dataInput').value.trim();
+    const rows = inputData.split('\n');
+    const columns = rows.map(row => row.split(','));
+
+    const labels = columns.map(column => column[0]);
+    const data = columns.map(column => parseFloat(column[1]));
+
+    const ctx = document.getElementById('myLineChart').getContext('2d');
+    const myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '데이터 꺾은선 그래프',
+                data: data,
+                fill: false,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            scales: {
+                x: {
+                    type: 'category',
+                    labels: labels
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+}
+</script>
