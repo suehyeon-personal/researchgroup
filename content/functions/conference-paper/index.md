@@ -2335,10 +2335,18 @@ Create your slides in Markdown - click the _Slides_ button to check out the exam
 </textarea>
 <button onclick="drawLineChart()">Plot</button>
 
-<canvas id="myLineChart" width="60%" height="20%"></canvas>
+<canvas id="myLineChart" width="50%" height="20%"></canvas>
 
 <script>
+// script.js 파일
+let myLineChart; // 차트 객체를 저장할 전역 변수
+
 function drawLineChart() {
+
+    if (myLineChart) {
+        myLineChart.destroy();
+    }
+
     const inputData = document.getElementById('dataInput').value.trim();
     const rows = inputData.split('\n');
     const columns = rows.map(row => row.split(','));
@@ -2346,8 +2354,13 @@ function drawLineChart() {
     const labels = columns.map(column => column[0]);
     const data = columns.map(column => parseFloat(column[1]));
 
+    const maxData = Math.max(...data);
+    const maxY = Math.ceil(maxData * 1.2);
+
+    const maxX = labels[labels.length - 1] + 1;
+
     const ctx = document.getElementById('myLineChart').getContext('2d');
-    const myLineChart = new Chart(ctx, {
+    myLineChart = new Chart(ctx, {
         type: 'line',
         data: {
             labels: labels,
@@ -2361,14 +2374,23 @@ function drawLineChart() {
         options: {
             scales: {
                 x: {
-                    type: 'category',
-                    labels: labels
+                    type: 'linear',
+                    position: 'bottom',
+                    min: 0,
+                    max: maxX
                 },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    max: maxY
                 }
             }
         }
     });
 }
+
+function plotNewData() {
+    document.getElementById('dataInput').value = "";
+    drawLineChart();
+}
+
 </script>
