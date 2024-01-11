@@ -80,7 +80,7 @@ slides: example
 Create your slides in Markdown - click the _Slides_ button to check out the example.
 {{% /callout %}}
 
-<textarea id="dataInput" rows="10" cols="30" value="
+<textarea id="dataInput" rows="10" cols="30">
 0.496,5.86E-07
 0.4962,6.07E-07
 0.4964,5.66E-07
@@ -2331,7 +2331,7 @@ Create your slides in Markdown - click the _Slides_ button to check out the exam
 4.90119,0.98968
 4.92063,0.9909
 4.94024,0.99383
-4.96,1">
+4.96,1
 </textarea>
 <button onclick="drawLineChart()">Plot</button>
 
