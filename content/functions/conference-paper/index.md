@@ -83,4 +83,8 @@ Click the _Cite_ button above to demo the feature to enable visitors to import p
 Create your slides in Markdown - click the _Slides_ button to check out the example.
 {{% /callout %}}
 
+{{ <textarea id="dataInput" rows="10" cols="30" placeholder="데이터를 입력하세요. 각 줄은 쉼표(,)로 구분된 2개의 값이어야 합니다."></textarea>
+<button onclick="drawLineChart()">Plot</button> }}
+
+
 Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
